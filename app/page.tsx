@@ -127,10 +127,10 @@ export default function Home() {
       <Footer />
 
       <Particles
-        quantityDesktop={350}
-        quantityMobile={100}
+        quantityDesktop={150}
+        quantityMobile={50}
         ease={80}
-        color={"#F7FF9B"}
+        color={"#cbd5e1"}
         refresh
       />
     </main>

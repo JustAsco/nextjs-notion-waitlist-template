@@ -12,25 +12,32 @@ export default function CTA() {
       animate="visible">
       <motion.div variants={itemVariants}>
         <div className="flex items-center justify-center">
-          <div className="flex w-fit items-center justify-center rounded-full bg-red-900/30 border border-red-500/30 text-center">
-            <AnimatedShinyText className="px-4 py-1 text-red-400">
-              <span>You are being watched.</span>
+          <div className="flex w-fit items-center justify-center rounded-full bg-zinc-900 border border-zinc-700 text-center">
+            <AnimatedShinyText className="px-4 py-1 text-zinc-300 text-sm tracking-wide uppercase">
+              <span>Performance Tracking Active</span>
             </AnimatedShinyText>
           </div>
         </div>
       </motion.div>
 
+      <motion.img
+        src="/logo.png"
+        alt="Micromanager Logo"
+        className="mx-auto h-24 w-24 mt-6 opacity-90"
+        variants={itemVariants}
+      />
+
       <motion.div variants={itemVariants} className="mt-8">
         <TextBlur
-          className="text-center text-4xl font-black tracking-tighter text-white sm:text-6xl uppercase"
-          text="The Accountability Coach That Hates Your Excuses."
+          className="text-center text-4xl font-black tracking-tight text-white sm:text-6xl"
+          text="Zero Tolerance For Mediocrity."
         />
       </motion.div>
 
       <motion.div variants={itemVariants} className="mb-8">
         <TextBlur
           className="mx-auto max-w-[32rem] pt-4 text-center text-base text-zinc-400 sm:text-lg"
-          text="Micromanager App is a merciless, voice-based AI that tracks your schedule, weaponizes your insecurities, and calls you out on your lies. Join the waitlist before it gets banned."
+          text="Micromanager is a voice-based AI built for extreme accountability. It monitors your calendar, calculates your inefficiencies, and calls you directly when you deviate from the plan. No empathy. Just results."
           duration={0.8}
         />
       </motion.div>
