@@ -12,32 +12,25 @@ export default function CTA() {
       animate="visible">
       <motion.div variants={itemVariants}>
         <div className="flex items-center justify-center">
-          <div className="flex w-fit items-center justify-center rounded-full bg-muted/80 text-center">
-            <AnimatedShinyText className="px-4 py-1">
-              <span>Coming soon!</span>
+          <div className="flex w-fit items-center justify-center rounded-full bg-red-900/30 border border-red-500/30 text-center">
+            <AnimatedShinyText className="px-4 py-1 text-red-400">
+              <span>You are being watched.</span>
             </AnimatedShinyText>
           </div>
         </div>
       </motion.div>
 
-      <motion.img
-        src="/logo.svg"
-        alt="logo"
-        className="mx-auto h-24 w-24"
-        variants={itemVariants}
-      />
-
-      <motion.div variants={itemVariants}>
+      <motion.div variants={itemVariants} className="mt-8">
         <TextBlur
-          className="text-center text-3xl font-medium tracking-tighter sm:text-5xl"
-          text="A Simple Next.js Waitlist Template with Notion as CMS"
+          className="text-center text-4xl font-black tracking-tighter text-white sm:text-6xl uppercase"
+          text="The Accountability Coach That Hates Your Excuses."
         />
       </motion.div>
 
-      <motion.div variants={itemVariants}>
+      <motion.div variants={itemVariants} className="mb-8">
         <TextBlur
-          className="mx-auto max-w-[27rem] pt-1.5 text-center text-base text-zinc-300 sm:text-lg"
-          text="Join the waitlist to get early access of the product and recieve updates on the progress!"
+          className="mx-auto max-w-[32rem] pt-4 text-center text-base text-zinc-400 sm:text-lg"
+          text="Micromanager App is a merciless, voice-based AI that tracks your schedule, weaponizes your insecurities, and calls you out on your lies. Join the waitlist before it gets banned."
           duration={0.8}
         />
       </motion.div>
