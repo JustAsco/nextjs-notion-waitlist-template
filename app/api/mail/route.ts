@@ -1,6 +1,6 @@
 import { render } from "@react-email/render";
 
-import WelcomeTemplate from "../../../emails";
+import MicromanagerWaitlistEmail from "../../../emails";
 
 import { Resend } from "resend";
 import { NextRequest, NextResponse } from "next/server";
@@ -39,11 +39,11 @@ export async function POST(request: NextRequest, response: NextResponse) {
   const { email, firstname } = await request.json();
 
   const { data, error } = await resend.emails.send({
-    from: "Lakshay<hello@waitlist.lakshb.dev>",
+    from: "Micromanager<compliance@trymicromanager.com>",
     to: [email],
-    subject: "Thankyou for wailisting the Next.js + Notion CMS template!",
-    reply_to: "lakshb.work@gmail.com",
-    html:  await render(WelcomeTemplate({ userFirstname: firstname })),
+    subject: "Your Performance Review is Pending.",
+    reply_to: "noreply@trymicromanager.com",
+    html:  await render(MicromanagerWaitlistEmail({ userFirstname: firstname })),
   });
 
   // const { data, error } = { data: true, error: null }
