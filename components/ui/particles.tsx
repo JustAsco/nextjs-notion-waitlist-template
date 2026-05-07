@@ -153,8 +153,8 @@ const Particles: React.FC<ParticlesProps> = ({
       canvasSize.current.h = window.innerHeight;
       canvasRef.current.width = canvasSize.current.w * dpr;
       canvasRef.current.height = canvasSize.current.h * dpr;
-      canvasRef.current.style.width = `100vw`;
-      canvasRef.current.style.height = `100vh`;
+      canvasRef.current.style.width = `100%`;
+      canvasRef.current.style.height = `100%`;
       context.current.scale(dpr, dpr);
     }
   };
@@ -282,10 +282,10 @@ const Particles: React.FC<ParticlesProps> = ({
 
   return (
     <div
-      className={`${className} fixed inset-0 -z-[100]`}
+      className={`${className} fixed inset-0 -z-[100] pointer-events-none`}
       ref={canvasContainerRef}
       aria-hidden="true">
-      <canvas ref={canvasRef} style={{ width: "100vw", height: "100vh" }} />
+      <canvas ref={canvasRef} style={{ width: "100%", height: "100%" }} />
     </div>
   );
 };
